@@ -1,0 +1,15 @@
+# Files created by running Python scripts
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# VIM temporary files
+.*.sw?
+
+# IDE settings
+.idea
+
+# Virtual Env files
+.venv
+
+.git/
