@@ -1,9 +1,20 @@
 language: python
+
 python:
-  - "2.7"
-  - "3.6"
+- '3.6'
+
 install:
-  - pip install -r requirements.txt
+- pip install -r requirements.txt
 
 script:
-  - coverage run test.py
+- cd first_pip_module/
+- python setup.py sdist
+
+deploy:
+  provider: releases
+  api_key:
+    secure: IKzFCVbWpDhxTdarJZCBQSprK07gDLU+gM/BfvqhjW+ZFu5Baa8Xl8LOPZC1/JFNnFk/Pur2QU6O34OfWlbFjXOcqzWq/8b+5PllMoTsm4FDZCutryxSugETUeLPM2mNdPHToOuEQi1SNW0edgM+8mRSFm/OdjrlF3PQFp2+dynX/whY3ODZPetnCf4cm/gNKSFgF6qWpqQxDbi1sJCejvIVw4Ma/h0nKIqoONNy4WIn2lK7KxC9blTI+KQeeVlxrFZXniuk7ctO85bf3UDJLdoJwuN+np8tuZZ3IgHZsvALr5wg8Y4eWDA3CM+KbjWcahjdaB7wvisVvyoVpUW+laX8lyLQYYEVAu4CijSuNZquszPuPpsirvyHidTEABvj2l/FWP0oxEJ8ZYR+q+m6Z4mxiHscE6tVXRHxoC7v0ego5H3D+BExvzkI4UbdrgnSMS0tpMpUIp1rn+vFJteeUOMSiCpp4E0Iuh8CDbW/Tuef1TyqXBReo5RJiZWbnHfafbX8fGz4m54U2o19kNi1girqzxuMKSMY3c1TiCM6Qjlx48DMqP9mWO4jsD9Ho69JoIqVK9cUb0ovFpwam/MPfrtu7rfdAhTPZdREtmOopr6KG8G+GVxVAinRYiQ6SXhj+KD0zyUXQBLzCwA9xmBYScfqP+4BEahYHQP2tyHWL1A=
+  file: '"first_pip_module/dist/first_pip_module-*.tar.gz"'
+  skip_cleanup: true
+  on:
+    tags: true
