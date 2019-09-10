@@ -3,6 +3,10 @@ __pycache__/
 .pytest_cache/
 *.pyc
 
+
+dist/
+*.egg-info/
+
 # VIM temporary files
 .*.sw?
 
