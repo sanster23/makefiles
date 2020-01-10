@@ -32,7 +32,7 @@ test:	clean		## Run automated tests.
 
 
 lint:		## Run code linter to check code style.
-	flake8 --inline-quotes=single --show-source --max-line-length=120 --ignore=E128,W504 --exclude=./migration
+	flake8 --inline-quotes=single --show-source --max-line-length=120 --ignore=E128,W504
 
 
 .PHONY: usage install clean lint run test
