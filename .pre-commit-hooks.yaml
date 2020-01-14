@@ -1,0 +1,6 @@
+- id: py-lint
+  name: 'py lint'
+  entry: run-py-lint.sh
+  files: '\.py$'
+  language: 'script'
+  description: "Runs `py lint`, requires python"

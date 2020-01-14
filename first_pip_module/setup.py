@@ -9,7 +9,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="first_pip_module",
-    version="0.4",
+    version="0.3",
     author="Sanjay Singh Shekhawat",
     author_email="shekhawatsanjay23@gmail.com",
     description="This is a python module.",
